@@ -1,0 +1,48 @@
+.home-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.recipe-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recipe-card h3 {
+  padding: 10px;
+  font-size: 16px;
+  min-height: 60px;
+}
+
+.favorite-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: #f8f8f8;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.favorite-btn:hover {
+  background: #eee;
+}
