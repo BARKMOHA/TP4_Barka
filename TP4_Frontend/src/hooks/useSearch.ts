@@ -37,3 +37,5 @@ export const useSearch = (ingredient: string | null) => {
 
   return { recipes, loading, error };
 };
+
+//https://www.bezkoder.com/react-custom-hook/

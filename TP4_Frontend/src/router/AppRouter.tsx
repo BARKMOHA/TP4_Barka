@@ -4,7 +4,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Favorites from "../pages/Favorites";
 import Search from "../pages/Search";
-import ProtectedRoute from "./ProtectedRoute";
+import RequireAuth from "../components/RequireAuth";
 import RecipeDetails from "../pages/RecipeDetails";
 import History from "../pages/History";
 export default function AppRouter() {
@@ -13,9 +13,9 @@ export default function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/favorites" element={<ProtectedRoute><Favorites /></ProtectedRoute>} />
+        <Route path="/favorites" element={<RequireAuth><Favorites /></RequireAuth>} />
         <Route path="/search" element={<Search />} />
-        <Route path="/history" element={<ProtectedRoute><History /></ProtectedRoute>}/>
+        <Route path="/history" element={<RequireAuth><History /></RequireAuth>}/>
         <Route path="/recipe/:id" element={<RecipeDetails />} />
       </Routes>
   );

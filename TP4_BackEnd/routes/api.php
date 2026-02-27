@@ -23,8 +23,3 @@ Route::middleware('auth:sanctum')->group(function () {
 
 });
 
-
-
-Route::get('/mealplan', [MealPlanController::class, 'index']);
-Route::post('/mealplan', [MealPlanController::class, 'store']);
-Route::delete('/mealplan/{id}', [MealPlanController::class, 'destroy']);
